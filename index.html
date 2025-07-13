@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الصيراني لتحميل الفيديوهات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>الصيراني لتحميل الفيديوهات</h1>
+        <input type="text" id="searchInput" placeholder="ابحث عن فيديو...">
+        <button onclick="search()">بحث</button>
+        <button onclick="toggleTheme()">🌗 نهار/ليل</button>
+    </header>
+
+    <nav>
+        <button onclick="showSection('files')">📂 ملفاتي</button>
+        <button onclick="showSection('settings')">⚙️ الإعدادات</button>
+        <button onclick="updateVideos()">🔄 تحديث</button>
+        <button onclick="downloadAudio()">🎵 تحميل صوت فقط</button>
+        <button onclick="downloadVideo()">📹 تحميل فيديو</button>
+    </nav>
+
+    <main id="mainContent">
+        <section id="files" style="display:none;">
+            <h2>ملفاتي</h2>
+            <p>لا توجد ملفات محفوظة.</p>
+        </section>
+
+        <section id="settings" style="display:none;">
+            <h2>الإعدادات</h2>
+            <ul>
+                <li>ℹ️ حول التطبيق</li>
+                <li>📁 تنزيل إلى مسار</li>
+                <li>📽️ جودة الفيديو</li>
+                <li>⏩ سرعة التشغيل</li>
+                <li>🏠 القائمة الرئيسية</li>
+                <li><a href="https://wa.me/967718722595" target="_blank">💬 تواصل مع المطور</a></li>
+            </ul>
+        </section>
+
+        <section id="home">
+            <h2>فيديوهات مقترحة</h2>
+            <div id="videoList">
+                <p>لا توجد نتائج حالياً.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
